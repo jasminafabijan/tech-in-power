@@ -1,0 +1,111 @@
+@font-face {
+	font-family: "Open Sans";
+	src: url(../fonts/OpenSans-Semibold.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans-Regular";
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+      font-family: "Amble";
+      src: url(../fonts/Amble-Regular.ttf);
+}
+
+$primary-font: "Open Sans";
+$primary-font-light: "Open Sans-Regular";
+$second-font: "Amble";
+$color-gray: #898989;
+$color-black: #252525;
+$color-red: #eb050e;
+
+body {
+	font-family: $primary-font;
+	color: #555555;
+}
+
+h1, h2 {
+	font-family: $second-font;
+}
+
+a:hover {
+	color: $color-gray;
+	text-decoration: none;
+}
+
+.bs-docs-container {
+	padding-top: 70px;
+}
+
+.navbar-inverse {
+	background-color: #fff;
+	border-color: #a1a1a1;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(172,172,172,1);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(172,172,172,1);
+	box-shadow: 0px 2px 3px 0px rgba(172,172,172,1);
+	font-family: $second-font;
+	font-size: 18px;
+}
+
+.navbar-inverse .navbar-header {
+	margin: 13px 15px 0 0;
+}
+
+.navbar-inverse a,
+.navbar-inverse .navbar-nav > li > a {
+	color: $color-black;
+}
+
+.navbar-inverse a.active,
+.navbar-inverse .navbar-nav > .active a {
+	color: $color-gray;
+	background-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: $color-gray;
+}
+
+.navbar-brand {
+	float: none;
+	position: absolute;
+	left: 44%;
+	margin-top: -23px;
+	padding-top: 0;
+	display: inline-table;
+}
+
+.form-control {
+	width: 265px;
+	height: 36px;
+	font-size: 16px;
+	font-family: $primary-font-light;
+	border: 2px solid #959595;
+	border-radius: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.index {
+	.col-md-6 {
+		text-align: center;
+
+		h1 {
+			color: $color-black;
+			font-weight: bold;
+			margin-top: 60px;
+			font-size: 58px;
+		}
+
+		strong {
+			color: $color-red;
+		}
+
+		h2 {
+			font-weight: normal;
+		}
+
+		
+	}
+}

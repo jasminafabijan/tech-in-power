@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-Semibold.ttf); }
+
+@font-face {
+  font-family: "Open Sans-Regular";
+  src: url(../fonts/OpenSans-Regular.ttf); }
+
+@font-face {
+  font-family: "Amble";
+  src: url(../fonts/Amble-Regular.ttf); }
+
+body {
+  font-family: "Open Sans";
+  color: #555555; }
+
+h1, h2 {
+  font-family: "Amble"; }
+
+a:hover {
+  color: #898989;
+  text-decoration: none; }
+
+.bs-docs-container {
+  padding-top: 70px; }
+
+.navbar-inverse {
+  background-color: #fff;
+  border-color: #a1a1a1;
+  -webkit-box-shadow: 0px 2px 3px 0px #acacac;
+  -moz-box-shadow: 0px 2px 3px 0px #acacac;
+  box-shadow: 0px 2px 3px 0px #acacac;
+  font-family: "Amble";
+  font-size: 18px; }
+
+.navbar-inverse .navbar-header {
+  margin: 13px 15px 0 0; }
+
+.navbar-inverse a,
+.navbar-inverse .navbar-nav > li > a {
+  color: #252525; }
+
+.navbar-inverse a.active,
+.navbar-inverse .navbar-nav > .active a {
+  color: #898989;
+  background-color: #fff; }
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #898989; }
+
+.navbar-brand {
+  float: none;
+  position: absolute;
+  left: 44%;
+  margin-top: -23px;
+  padding-top: 0;
+  display: inline-table; }
+
+.form-control {
+  width: 265px;
+  height: 36px;
+  font-size: 16px;
+  font-family: "Open Sans-Regular";
+  border: 2px solid #959595;
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px; }
+
+.index .col-md-6 {
+  text-align: center; }
+  .index .col-md-6 h1 {
+    color: #252525;
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 58px; }
+  .index .col-md-6 strong {
+    color: #eb050e; }
+  .index .col-md-6 h2 {
+    font-weight: normal; }
