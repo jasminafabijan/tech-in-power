@@ -14,19 +14,23 @@
 }
 
 $primary-font: "Open Sans";
-$primary-font-light: "Open Sans-Regular";
+$primary-font-regular: "Open Sans-Regular";
 $second-font: "Amble";
 $color-gray: #898989;
-$color-black: #252525;
+$color-black: #414042;
 $color-red: #eb050e;
 
 body {
-	font-family: $primary-font;
-	color: #555555;
+	font-family: $primary-font-regular;
+	color: $color-black;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	font-family: $second-font;
+}
+
+a {
+	color: $color-black;
 }
 
 a:hover {
@@ -36,7 +40,9 @@ a:hover {
 
 .btn {
 	border: 1px solid $color-red;
-	font-family: $second-font;
+	font-size: 20px;
+	font-family: $primary-font-regular;
+	padding-top: 3px;
 }
 
 .btn-default {
@@ -63,6 +69,11 @@ a:hover {
 	margin: 13px 15px 0 0;
 }
 
+.navbar-toggle {
+	background-color: $color-black;
+	margin-top: 0;
+}
+
 .navbar-inverse a,
 .navbar-inverse .navbar-nav > li > a {
 	color: $color-black;
@@ -82,20 +93,32 @@ a:hover {
 	float: none;
 	position: absolute;
 	left: 44%;
-	margin-top: -23px;
+	top: 15px;
 	padding-top: 0;
-	display: inline-table;
+
+	@media(max-width: 767px) {
+		margin-top: 6px;
+		left: 40%;
+	}
 }
 
-.form-control {
+.search .form-control {
 	width: 265px;
 	height: 36px;
 	font-size: 16px;
-	font-family: $primary-font-light;
+	font-family: $primary-font-regular;
 	border: 2px solid #959595;
 	border-radius: 0;
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
+	display: inline;
+}
+
+.search .btn {
+	border-radius: 0;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	height: 36px;
 }
 
 .index {
@@ -115,10 +138,15 @@ a:hover {
 
 		h2 {
 			font-weight: normal;
+			margin-top: 10px;
+		}
+
+		.search {
+			margin-top: 50px;
 		}
 
 		.carousel-inner .item {
-			margin: 40px auto 0 auto;
+			margin: 30px auto 0 auto;
 		}
 
 		.carousel-inner .active {
@@ -127,11 +155,12 @@ a:hover {
 
 		.carousel-inner img {
 			display: inline;
-			max-height: 250px;
+			max-height: 260px;
 		}
 
 		.carousel-indicators {
 			top: 105%;
+			left: 40%;
 		}
 
 		.carousel-indicators .active {
@@ -142,5 +171,144 @@ a:hover {
 			background-color: #636363;
 			border: none;
 		}
+
+		.carousel-item-name {
+			position: absolute;
+			top: 82%;
+			right: 0;
+			height: 80px;
+			width: 220px;
+			background-color: #f6f6f6;
+			text-align: left;
+			font-size: 20px;
+		}
+	}
+
+	.menu {
+		background-color: $color-black;
+		margin-top: 70px;
+		border-radius: 0;
+		padding-top: 10px;
+		background: -webkit-linear-gradient(top,#363636 0%,#555 50%,#363636 100%);
+		background: -moz-linear-gradient(top,#363636 0%,#555 50%,#363636 100%);
+		background: -o-linear-gradient(top,#363636 0%,#555 50%,#363636 100%);
+		background: -ms-linear-gradient(top,#363636 0%,#555 50%,#363636 100%);
+		background: linear-gradient(to bottom,#363636 0%,#555 50%,#363636 100%);
+
+		ul {
+			color: #fff;
+			font-size: 20px;
+			font-family: $second-font;
+
+			li {
+				padding-right: 31px;
+			}
+
+			li:last-child {
+				padding-right: 0;
+			}
+
+			a {
+				color: #fff;
+				padding: 0;
+			}
+
+			a:hover {
+				background-color: transparent;
+				color: $color-gray;
+			}
+		}
+	}
+
+	.item-content {
+		padding-top: 0;
+
+		h3 {
+			color: $color-red;
+			margin-top: 10px;
+		}
+	}
+
+	.item-content .placeholders {
+		margin-top: 50px;
+
+		img {
+			height: 192px;
+			margin: 0 auto;
+		}
+
+		.separator {
+			border-top: dashed 1px #acacac;
+			border-bottom: dashed 1px #acacac;
+			margin: 20px 0 0 0;
+			padding: 10px 0;
+
+			span.price {
+				font-size: 16px;
+				color: #252525;
+			}
+
+			span.timer {
+				float: right;
+				color: $color-gray;
+			}
+
+			p {
+				height: 60px;
+			}
+		}
+	}	
+}
+
+/* Footer */
+
+.bs-footer {
+	background-color: $color-black;
+	color: #fff;
+	margin-top: 100px;
+	padding: 30px 0 40px 0;
+
+	p {
+		margin-bottom: 5px;
+	}
+
+	.separator1,
+	.separator2,
+	.separator3 {
+		border-top: 1px solid #6a6a6b;
+		margin-bottom: 20px;
+	}
+
+	.separator1,
+	.separator2 {
+		margin-right: -15px;
+	}
+
+	.separator2,
+	.separator3 {
+		margin-left: -15px;
+	}
+
+	li {
+		padding: 0 20px 10px 0;
+	}
+
+	.nav > li > a {
+		color: #fff;
+		padding: 0;
+	}
+
+	.nav > li > a:hover {
+		background-color: transparent;
+		color: $color-gray;
+	}
+
+	.col-sm-2 li.fb {
+		width: 56px;
+	}
+
+	.col-sm-2 a:hover img {
+		width: 35px;
+		height: 35px;
 	}
 }

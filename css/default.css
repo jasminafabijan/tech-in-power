@@ -11,11 +11,14 @@
   src: url(../fonts/Amble-Regular.ttf); }
 
 body {
-  font-family: "Open Sans";
-  color: #555555; }
+  font-family: "Open Sans-Regular";
+  color: #414042; }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Amble"; }
+
+a {
+  color: #414042; }
 
 a:hover {
   color: #898989;
@@ -23,7 +26,9 @@ a:hover {
 
 .btn {
   border: 1px solid #eb050e;
-  font-family: "Amble"; }
+  font-size: 20px;
+  font-family: "Open Sans-Regular";
+  padding-top: 3px; }
 
 .btn-default {
   color: #fff;
@@ -45,9 +50,13 @@ a:hover {
 .navbar-inverse .navbar-header {
   margin: 13px 15px 0 0; }
 
+.navbar-toggle {
+  background-color: #414042;
+  margin-top: 0; }
+
 .navbar-inverse a,
 .navbar-inverse .navbar-nav > li > a {
-  color: #252525; }
+  color: #414042; }
 
 .navbar-inverse a.active,
 .navbar-inverse .navbar-nav > .active a {
@@ -61,11 +70,14 @@ a:hover {
   float: none;
   position: absolute;
   left: 44%;
-  margin-top: -23px;
-  padding-top: 0;
-  display: inline-table; }
+  top: 15px;
+  padding-top: 0; }
+  @media (max-width: 767px) {
+    .navbar-brand {
+      margin-top: 6px;
+      left: 40%; } }
 
-.form-control {
+.search .form-control {
   width: 265px;
   height: 36px;
   font-size: 16px;
@@ -73,30 +85,130 @@ a:hover {
   border: 2px solid #959595;
   border-radius: 0;
   border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px; }
+  border-bottom-left-radius: 4px;
+  display: inline; }
+
+.search .btn {
+  border-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 36px; }
 
 .index .col-md-6 {
   text-align: center; }
   .index .col-md-6 h1 {
-    color: #252525;
+    color: #414042;
     font-weight: bold;
     margin-top: 60px;
     font-size: 58px; }
   .index .col-md-6 strong {
     color: #eb050e; }
   .index .col-md-6 h2 {
-    font-weight: normal; }
+    font-weight: normal;
+    margin-top: 10px; }
+  .index .col-md-6 .search {
+    margin-top: 50px; }
   .index .col-md-6 .carousel-inner .item {
-    margin: 40px auto 0 auto; }
+    margin: 30px auto 0 auto; }
   .index .col-md-6 .carousel-inner .active {
     display: table; }
   .index .col-md-6 .carousel-inner img {
     display: inline;
-    max-height: 250px; }
+    max-height: 260px; }
   .index .col-md-6 .carousel-indicators {
-    top: 105%; }
+    top: 105%;
+    left: 40%; }
   .index .col-md-6 .carousel-indicators .active {
     background-color: #eb050e; }
   .index .col-md-6 .carousel-indicators li {
     background-color: #636363;
     border: none; }
+  .index .col-md-6 .carousel-item-name {
+    position: absolute;
+    top: 82%;
+    right: 0;
+    height: 80px;
+    width: 220px;
+    background-color: #f6f6f6;
+    text-align: left;
+    font-size: 20px; }
+.index .menu {
+  background-color: #414042;
+  margin-top: 70px;
+  border-radius: 0;
+  padding-top: 10px;
+  background: -webkit-linear-gradient(top, #363636 0%, #555555 50%, #363636 100%);
+  background: -moz-linear-gradient(top, #363636 0%, #555555 50%, #363636 100%);
+  background: -o-linear-gradient(top, #363636 0%, #555555 50%, #363636 100%);
+  background: -ms-linear-gradient(top, #363636 0%, #555555 50%, #363636 100%);
+  background: linear-gradient(to bottom, #363636 0%, #555555 50%, #363636 100%); }
+  .index .menu ul {
+    color: #fff;
+    font-size: 20px;
+    font-family: "Amble"; }
+    .index .menu ul li {
+      padding-right: 31px; }
+    .index .menu ul li:last-child {
+      padding-right: 0; }
+    .index .menu ul a {
+      color: #fff;
+      padding: 0; }
+    .index .menu ul a:hover {
+      background-color: transparent;
+      color: #898989; }
+.index .item-content {
+  padding-top: 0; }
+  .index .item-content h3 {
+    color: #eb050e;
+    margin-top: 10px; }
+.index .item-content .placeholders {
+  margin-top: 50px; }
+  .index .item-content .placeholders img {
+    height: 192px;
+    margin: 0 auto; }
+  .index .item-content .placeholders .separator {
+    border-top: dashed 1px #acacac;
+    border-bottom: dashed 1px #acacac;
+    margin: 20px 0 0 0;
+    padding: 10px 0; }
+    .index .item-content .placeholders .separator span.price {
+      font-size: 16px;
+      color: #252525; }
+    .index .item-content .placeholders .separator span.timer {
+      float: right;
+      color: #898989; }
+    .index .item-content .placeholders .separator p {
+      height: 60px; }
+
+/* Footer */
+.bs-footer {
+  background-color: #414042;
+  color: #fff;
+  margin-top: 100px;
+  padding: 30px 0 40px 0; }
+  .bs-footer p {
+    margin-bottom: 5px; }
+  .bs-footer .separator1,
+  .bs-footer .separator2,
+  .bs-footer .separator3 {
+    border-top: 1px solid #6a6a6b;
+    margin-bottom: 20px; }
+  .bs-footer .separator1,
+  .bs-footer .separator2 {
+    margin-right: -15px; }
+  .bs-footer .separator2,
+  .bs-footer .separator3 {
+    margin-left: -15px; }
+  .bs-footer li {
+    padding: 0 20px 10px 0; }
+  .bs-footer .nav > li > a {
+    color: #fff;
+    padding: 0; }
+  .bs-footer .nav > li > a:hover {
+    background-color: transparent;
+    color: #898989; }
+  .bs-footer .col-sm-2 li.fb {
+    width: 56px; }
+  .bs-footer .col-sm-2 a:hover img {
+    width: 35px;
+    height: 35px; }
