@@ -51,8 +51,15 @@ a:hover {
 	border-color: $color-red;
 }
 
+.btn-default:hover {
+	background-color: $color-red;
+	border-color: $color-red;
+	color: $color-black;
+}
+	
+
 .bs-docs-container {
-	padding-top: 70px;
+	padding-top: 10px;
 }
 
 .navbar-inverse {
@@ -72,6 +79,10 @@ a:hover {
 .navbar-toggle {
 	background-color: $color-black;
 	margin-top: 0;
+
+	@media(max-width: 480px) {
+		margin-right: 0;
+	}
 }
 
 .navbar-inverse a,
@@ -100,6 +111,10 @@ a:hover {
 		margin-top: 6px;
 		left: 40%;
 	}
+
+	@media(max-width: 480px) {
+		left: 30%;
+	}
 }
 
 .search .form-control {
@@ -112,6 +127,14 @@ a:hover {
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
 	display: inline;
+
+	@media(max-width: 992px) {
+		width: 240px;
+	}
+
+	@media(max-width: 480px) {
+		width: 220px;
+	}
 }
 
 .search .btn {
@@ -122,7 +145,7 @@ a:hover {
 }
 
 .index {
-	.col-md-6 {
+	.col-sm-6 {
 		text-align: center;
 
 		h1 {
@@ -130,6 +153,14 @@ a:hover {
 			font-weight: bold;
 			margin-top: 60px;
 			font-size: 58px;
+
+			@media(max-width: 992px) {
+				font-size: 52px;
+			}
+
+			@media(max-width: 480px) {
+				font-size: 48px;
+			}
 		}
 
 		strong {
@@ -139,10 +170,23 @@ a:hover {
 		h2 {
 			font-weight: normal;
 			margin-top: 10px;
+
+			@media(max-width: 992px) {
+				font-size: 28px;
+			}
+
+			@media(max-width: 480px) {
+				font-size: 26px;
+			}
 		}
 
 		.search {
 			margin-top: 50px;
+
+			@media(max-width: 767px) {
+				margin-top: 30px;
+				margin-bottom: 20px;
+			}
 		}
 
 		.carousel-inner .item {
@@ -161,6 +205,10 @@ a:hover {
 		.carousel-indicators {
 			top: 105%;
 			left: 40%;
+
+			@media(max-width: 992px) {
+				left: 25%;
+			}
 		}
 
 		.carousel-indicators .active {
@@ -194,6 +242,10 @@ a:hover {
 		background: -o-linear-gradient(top,#363636 0%,#555 50%,#363636 100%);
 		background: -ms-linear-gradient(top,#363636 0%,#555 50%,#363636 100%);
 		background: linear-gradient(to bottom,#363636 0%,#555 50%,#363636 100%);
+
+		@media(max-width: 1199px) {
+			padding-bottom: 10px;
+		}
 
 		ul {
 			color: #fff;
@@ -232,9 +284,31 @@ a:hover {
 	.item-content .placeholders {
 		margin-top: 50px;
 
+		.col-sm-3 {
+			@media(max-width: 767px) {
+					margin-bottom: 30px;
+				}
+		}
+
 		img {
 			height: 192px;
 			margin: 0 auto;
+			
+			@media(max-width: 1199px) {
+				height: 150px;
+			}
+
+			@media(max-width: 992px) {
+				height: 116px;
+			}
+
+			@media(max-width: 767px) {
+				height: 150px;
+			}
+
+			@media(max-width: 480px) {
+				height: 110px;
+			}
 		}
 
 		.separator {
@@ -254,7 +328,23 @@ a:hover {
 			}
 
 			p {
-				height: 60px;
+				height: 40px;
+
+				@media(max-width: 1199px) {
+					height: 60px;
+				}
+
+				@media(max-width: 992px) {
+					height: 80px;
+				}
+
+				@media(max-width: 767px) {
+					height: 60px;
+				}
+
+				@media(max-width: 480px) {
+					height: 80px;
+				}
 			}
 		}
 	}	
@@ -267,6 +357,10 @@ a:hover {
 	color: #fff;
 	margin-top: 100px;
 	padding: 30px 0 40px 0;
+
+	@media(max-width: 767px) {
+		margin-top: 70px;
+	}
 
 	p {
 		margin-bottom: 5px;
@@ -303,12 +397,18 @@ a:hover {
 		color: $color-gray;
 	}
 
-	.col-sm-2 li.fb {
+	.col-sm-3 li.fb {
 		width: 56px;
 	}
 
-	.col-sm-2 a:hover img {
+	.col-sm-3 a:hover img {
 		width: 35px;
 		height: 35px;
+	}
+
+	.col-sm-3 {
+		@media(max-width: 767px) {
+			margin-top: 20px;
+		}
 	}
 }
