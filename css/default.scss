@@ -27,6 +27,7 @@ body {
 
 h1, h2, h3 {
 	font-family: $second-font;
+	color: $color-black;
 }
 
 a {
@@ -98,6 +99,10 @@ a:hover {
 
 .navbar-inverse .navbar-nav > li > a:hover {
 	color: $color-gray;
+}
+
+.nav > li:last-child > a {
+	padding-right: 0;
 }
 
 .navbar-brand {
@@ -204,11 +209,7 @@ a:hover {
 
 		.carousel-indicators {
 			top: 105%;
-			left: 40%;
-
-			@media(max-width: 992px) {
-				left: 25%;
-			}
+			left: 45%;
 		}
 
 		.carousel-indicators .active {
@@ -220,15 +221,45 @@ a:hover {
 			border: none;
 		}
 
-		.carousel-item-name {
+		.carousel-caption {
 			position: absolute;
-			top: 82%;
-			right: 0;
+			top: 70%;
+			left: 64%;
 			height: 80px;
-			width: 220px;
+			width: 230px;
 			background-color: #f6f6f6;
 			text-align: left;
 			font-size: 20px;
+			padding: 0 12px 0 0;
+			text-shadow: none;
+
+			@media(max-width: 1199px) {
+				left: 50%;
+			}
+
+			@media(max-width: 992px) {
+				left: 10%;
+			}
+
+			h3 {
+				font-size: 20px;
+				margin: 10px;
+			}
+
+			span {
+				color: $color-red;
+				margin-left: 10px;
+			}
+
+			a:hover img {
+				width: 35px;
+				height: 35px;
+			}
+
+			img {
+				float: right;
+				margin-top: -10px;
+			}
 		}
 	}
 
@@ -350,7 +381,7 @@ a:hover {
 	}	
 }
 
-/* Footer */
+/* Footer - START */
 
 .bs-footer {
 	background-color: $color-black;
@@ -412,3 +443,5 @@ a:hover {
 		}
 	}
 }
+/* Footer - END */
+

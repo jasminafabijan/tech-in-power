@@ -15,7 +15,8 @@ body {
   color: #414042; }
 
 h1, h2, h3 {
-  font-family: "Amble"; }
+  font-family: "Amble";
+  color: #414042; }
 
 a {
   color: #414042; }
@@ -73,6 +74,9 @@ a:hover {
 
 .navbar-inverse .navbar-nav > li > a:hover {
   color: #898989; }
+
+.nav > li:last-child > a {
+  padding-right: 0; }
 
 .navbar-brand {
   float: none;
@@ -150,24 +154,41 @@ a:hover {
     max-height: 260px; }
   .index .col-sm-6 .carousel-indicators {
     top: 105%;
-    left: 40%; }
-    @media (max-width: 992px) {
-      .index .col-sm-6 .carousel-indicators {
-        left: 25%; } }
+    left: 45%; }
   .index .col-sm-6 .carousel-indicators .active {
     background-color: #eb050e; }
   .index .col-sm-6 .carousel-indicators li {
     background-color: #636363;
     border: none; }
-  .index .col-sm-6 .carousel-item-name {
+  .index .col-sm-6 .carousel-caption {
     position: absolute;
-    top: 82%;
-    right: 0;
+    top: 70%;
+    left: 64%;
     height: 80px;
-    width: 220px;
+    width: 230px;
     background-color: #f6f6f6;
     text-align: left;
-    font-size: 20px; }
+    font-size: 20px;
+    padding: 0 12px 0 0;
+    text-shadow: none; }
+    @media (max-width: 1199px) {
+      .index .col-sm-6 .carousel-caption {
+        left: 50%; } }
+    @media (max-width: 992px) {
+      .index .col-sm-6 .carousel-caption {
+        left: 10%; } }
+    .index .col-sm-6 .carousel-caption h3 {
+      font-size: 20px;
+      margin: 10px; }
+    .index .col-sm-6 .carousel-caption span {
+      color: #eb050e;
+      margin-left: 10px; }
+    .index .col-sm-6 .carousel-caption a:hover img {
+      width: 35px;
+      height: 35px; }
+    .index .col-sm-6 .carousel-caption img {
+      float: right;
+      margin-top: -10px; }
 .index .menu {
   background-color: #414042;
   margin-top: 70px;
@@ -246,7 +267,7 @@ a:hover {
         .index .item-content .placeholders .separator p {
           height: 80px; } }
 
-/* Footer */
+/* Footer - START */
 .bs-footer {
   background-color: #414042;
   color: #fff;
@@ -284,3 +305,5 @@ a:hover {
   @media (max-width: 767px) {
     .bs-footer .col-sm-3 {
       margin-top: 20px; } }
+
+/* Footer - END */
