@@ -1,11 +1,13 @@
 @font-face {
-	font-family: "Open Sans";
-	src: url(../fonts/OpenSans-Semibold.ttf);
+	font-family: "Open Sans - Regular";
+	src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
-	font-family: "Open Sans-Regular";
-	src: url(../fonts/OpenSans-Regular.ttf);
+	font-family: "Open Sans";
+	src: url(../fonts/OpenSans-Light.ttf);
+	src: url(../fonts/OpenSans-Semibold.ttf);
+	src: url(../fonts/OpenSans-Bold.ttf);
 }
 
 @font-face {
@@ -13,21 +15,40 @@
       src: url(../fonts/Amble-Regular.ttf);
 }
 
-$primary-font: "Open Sans";
-$primary-font-regular: "Open Sans-Regular";
+$primary-font: "Open Sans - Regular";
 $second-font: "Amble";
 $color-gray: #898989;
 $color-black: #414042;
 $color-red: #eb050e;
+$border-light: 1px solid #ebebeb;
+
+@mixin box-shadow {
+	border: $border-light;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(137, 137, 137, 0.4);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(137, 137, 137, 0.4);
+	box-shadow: 0px 1px 3px 0px rgba(137, 137, 137, 0.4);
+}
 
 body {
-	font-family: $primary-font-regular;
+	font-family: $primary-font;
 	color: $color-black;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-family: $second-font;
 	color: $color-black;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 18px;
 }
 
 a {
@@ -43,7 +64,7 @@ a:hover {
 .btn {
 	border: 1px solid $color-red;
 	font-size: 20px;
-	font-family: $primary-font-regular;
+	font-family: $second-font;
 	padding-top: 3px;
 }
 
@@ -58,7 +79,47 @@ a:hover {
 	border-color: $color-red;
 	color: $color-black;
 }
+
+.btn-success {
+	border-radius: 2px;
+	height: 34px;
+	min-width: 84px;
+	padding: 0 15px;
+	font-size: 24px;
+	font-weight: bold;
+	background-image: -ms-linear-gradient(top, #E61B23 0%, #CA181F 100%);
+	background-image: -moz-linear-gradient(top, #E61B23 0%, #CA181F 100%);
+	background-image: -o-linear-gradient(top, #E61B23 0%, #CA181F 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E61B23), color-stop(1, #CA181F));
+	background-image: -webkit-linear-gradient(top, #E61B23 0%, #CA181F 100%); 
+	background-image: linear-gradient(to bottom, #E61B23 0%, #CA181F 100%);
+}
+
+.btn-success:hover {
+	background-color: $color-red;
+	border-color: $color-red;
+	color: $color-black;
+}
+
+.btn-primary {
+	background-color: $color-black;
+	border-color: $color-black;
+	font-size: 18px;
+	padding: 1px 8px 2px;
+	border-radius: 2px;
+	background-image: -ms-linear-gradient(top, #535254 0%, #454446 100%);
+	background-image: -moz-linear-gradient(top, #535254 0%, #454446 100%);
+	background-image: -o-linear-gradient(top, #535254 0%, #454446 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #535254), color-stop(1, #454446));
+	background-image: -webkit-linear-gradient(top, #535254 0%, #454446 100%); 
+	background-image: linear-gradient(to bottom, #535254 0%, #454446 100%);
+}
 	
+.btn-primary:hover {
+	background-color: $color-black;
+	border-color: $color-black;
+	color: #d7d7d7;
+}
 
 .bs-docs-container {
 	padding-top: 10px;
@@ -127,8 +188,9 @@ a:hover {
 	width: 265px;
 	height: 36px;
 	font-size: 16px;
-	font-family: $primary-font-regular;
+	font-family: $primary-font;
 	border: 2px solid #959595;
+	background-color: #fff;
 	border-radius: 0;
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
@@ -151,6 +213,20 @@ a:hover {
 	margin-left: -2px;
 }
 
+.form-control,
+input[type="text"] {
+	border: 1px solid #ebebeb;
+	border-radius: 2px;
+	background-color: #f6f6f6;
+	-webkit-box-shadow: inset 0 1px 1px rgba(235, 235, 235, 0.005);
+    	box-shadow: inset 0 1px 1px rgba(235, 235, 235, 0.005);
+}
+
+input[type="text"] {
+	height: 34px;
+}
+
+/* Homepage */
 .index {
 	.col-sm-6 {
 		text-align: center;
@@ -244,7 +320,6 @@ a:hover {
 			}
 
 			h3 {
-				font-size: 20px;
 				margin: 10px;
 			}
 
@@ -373,10 +448,11 @@ a:hover {
 	}	
 }
 
-/* Shared css - index/category-page */
+/* Shared css - index/Category-page/Product-page */
 
 .index,
-.category-page {
+.category-page,
+.product-page {
 
 	 span.price {
 		font-size: 16px;
@@ -453,9 +529,9 @@ a:hover {
 }
 /* Footer - END */
 
+/* Category page */
 .category-page {
 	h1 {
-		font-size: 24px;
 		margin: 0 0 30px 0;
 	}
 	
@@ -468,7 +544,7 @@ a:hover {
 				width: 50%;
 			}
 		}
-		
+
 		margin-top: 80px;
 		
 		.border-vertical {
@@ -527,17 +603,13 @@ a:hover {
 		}
 		
 		.product-frame {
-			border: 1px solid #ebebeb;
-			-webkit-box-shadow: 0px 1px 3px 0px rgba(137, 137, 137, 0.4);
-			-moz-box-shadow: 0px 1px 3px 0px rgba(137, 137, 137, 0.4);
-			box-shadow: 0px 1px 3px 0px rgba(137, 137, 137, 0.4);
+			@include box-shadow;
 			padding: 10px;
 		}
 
 		.img-holder {
 			height: 240px;
 			padding: 0;
-			vertical-align: middle;
 		}
 
 		img {
@@ -550,3 +622,275 @@ a:hover {
 		}
 	}
 }
+
+/* Shared css - Category/Product-page */
+
+.category-page .search-form,
+.product-page .search-form {
+	@media(max-width: 991px) {
+		margin: 20px 0;
+	}
+} 
+
+.category-page .search .form-control,
+.product-page .search .form-control {
+	width: 186px;
+	font-size: 14px;
+	height: 34px;
+} 
+
+.category-page .search .btn,
+.product-page .search .btn {
+	font-size: 16px;
+	height: 34px;
+}
+
+/* Product page */
+
+.product-page {
+	
+	div.back {
+		margin-top: 25px;
+	}
+
+	a.back {
+		text-decoration: underline;
+	}
+
+	.col-md-5 {
+		margin-top: 30px;
+	
+
+		.product-image-holder {
+			@include box-shadow;
+			height: 455px;
+			padding: 10px;
+			margin: auto;
+		}
+
+		ul.list-inline {
+			margin-top: 20px;
+
+			li {
+				display: inline-block;
+				width: 32%;
+				height: 146px;
+				border: $border-light;
+				padding: 5px;
+				margin-right: 5px;
+
+				@media(min-width: 992px) and (max-width: 1199px) {
+					margin-right: 3px;
+					height: 140px;
+				}
+
+				@media(max-width: 480px) {
+					margin-right: 2px;
+					height: 120px;
+				}
+			}
+
+			li:last-child {
+				margin-right: 0;
+			}
+
+			img {
+				max-height: 134px;
+				max-width: 132px;
+				margin: auto;
+
+				@media(min-width: 992px) and (max-width: 1199px) {
+					max-width: 108px;
+				}
+
+				@media(max-width: 480px) {
+					max-width: 94px;
+				}
+			}
+		}
+	}
+
+	.col-md-7 {
+		margin-top: 8px;
+
+		h1 {
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		span,
+		p.time-left,
+		label {
+			font-size: 22px;
+			font-weight: 300;
+		}
+
+		div.quantity {
+			margin: 10px 0;
+
+			.form-control {
+				width: 80px;
+				display: inline;
+				font-size: 18px;
+				font-weight: 300;
+				margin: 0 10px 4px;
+			}
+
+			span.in-stock {
+				font-size: 18px;
+				color: #555;
+			}
+		}
+
+		.form-inline {
+			display: inline;
+			margin: 0 0 4px 20px;
+
+			input {
+				width: 90px;
+			}
+
+			button {
+				margin: 0 0 4px 30px;;
+			}
+		}
+
+		.payment-share {
+			margin-top: 30px;
+
+			span {
+				font-size: 14px;
+			}
+		}
+
+		.product-details {
+			border-top: $border-light;
+			margin-top: 30px;
+		}
+	}
+
+	.similar-products {
+		@media(max-width: 991px) {
+			margin-bottom: 40px;
+		}
+		
+		h3 {
+			margin: 50px 0 30px;
+		}
+
+		.placeholder {
+			@media(max-width: 767px) {
+				margin-bottom: 30px;
+			}
+		}
+
+		.product-frame {
+			border: $border-light;
+			padding: 5px;
+
+			.img-holder {
+				height: 180px;
+
+				@media(min-width: 768px) and (max-width: 991px) {
+					height: 150px;
+				}
+
+				@media(max-width: 512px) {
+					height: 150px;
+				}
+			}
+
+			img {
+				max-height: 180px;
+				margin: auto;
+
+				@media(min-width: 768px) and (max-width: 991px) {
+					height: 150px;
+				}
+
+				@media(max-width: 512px) {
+					height: 150px;
+				}
+			}
+
+			p {
+				margin-top: 10px;
+				min-height: 40px;
+
+				@media(min-width: 992px) and (max-width: 1199px) {
+					height: 60px;
+				}
+
+				@media(min-width: 768px) and (max-width: 991px) {
+					height: 80px;
+				}
+
+				@media(max-width: 512px) {
+					height: 80px;
+				}
+			}
+		}
+	}
+
+	.title-border-bottom {
+		margin: 50px 0 20px 0px;
+		border-bottom: $border-light;
+	}
+
+	.rating-feedback {
+			
+		h3 {
+			display: inline;
+		}
+
+		img {
+			padding-bottom: 8px;
+		}
+
+		form {
+			margin-bottom: 70px;
+
+			.btn {
+			margin-top: 10px;
+			}
+		}
+
+		.feedback {
+			margin-top: 20px;
+
+			span {
+				font-family: $second-font;
+			}
+
+			span.name {
+				margin-right: 10px;
+			}
+
+			p {
+				margin: 8px 0;
+			}
+
+			a {
+				color: $color-red;
+				font-family: $second-font;
+			}
+
+			a:hover {
+				color: $color-black;
+			}
+		}
+	}
+
+	.bid-history {
+
+		.title-border-bottom {
+			margin-top: 58px;
+		}
+
+		.table > tbody > tr > td {
+			border-top: none;
+			padding: 6px 8px;
+		}
+	}
+}
+
