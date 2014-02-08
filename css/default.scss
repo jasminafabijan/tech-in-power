@@ -125,6 +125,10 @@ a:hover {
 	padding-top: 10px;
 }
 
+.navbar {
+	border-radius: 0;
+}
+
 .navbar-inverse {
 	background-color: #fff;
 	border-color: #a1a1a1;
@@ -137,13 +141,17 @@ a:hover {
 
 .navbar-inverse .navbar-header {
 	margin: 13px 15px 0 0;
+
+	@media(max-width: 767px) {
+		margin-right: 0;
+	}
 }
 
 .navbar-toggle {
 	background-color: $color-black;
 	margin-top: 0;
 
-	@media(max-width: 480px) {
+	@media(max-width: 767px) {
 		margin-right: 0;
 	}
 }
@@ -174,13 +182,17 @@ a:hover {
 	top: 15px;
 	padding-top: 0;
 
+	@media(max-width: 992px) {
+		left: 43%;
+	}
+
 	@media(max-width: 767px) {
 		margin-top: 6px;
-		left: 40%;
+		left: 38%;
 	}
 
 	@media(max-width: 480px) {
-		left: 30%;
+		left: 27%;
 	}
 }
 
@@ -723,6 +735,7 @@ input[type="text"] {
 		label {
 			font-size: 22px;
 			font-weight: 300;
+			color: #555;
 		}
 
 		div.quantity {
@@ -738,7 +751,7 @@ input[type="text"] {
 
 			span.in-stock {
 				font-size: 18px;
-				color: #555;
+				color: #707070;
 			}
 		}
 
