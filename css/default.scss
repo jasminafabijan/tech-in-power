@@ -20,6 +20,7 @@ $second-font: "Amble";
 $color-gray: #898989;
 $color-black: #414042;
 $color-red: #eb050e;
+$lighter-font-color: #555;
 $border-light: 1px solid #ebebeb;
 
 @mixin box-shadow {
@@ -236,6 +237,10 @@ input[type="text"] {
 
 input[type="text"] {
 	height: 34px;
+}
+
+.horizontal-separator {
+	border-top: $border-light;
 }
 
 /* Homepage */
@@ -755,7 +760,7 @@ input[type="text"] {
 		label {
 			font-size: 22px;
 			font-weight: 300;
-			color: #555;
+			color: $lighter-font-color;
 		}
 
 		div.quantity {
@@ -924,6 +929,36 @@ input[type="text"] {
 			border-top: none;
 			padding: 6px 8px;
 		}
+	}
+}
+
+/* About Us page */
+
+.about-us-page {
+	h1 {
+		margin-top: 80px;
+	}
+
+	div.horizontal-separator {
+		margin-bottom: 30px;
+	}
+
+	.col-md-8 p {
+		font-size: 16px;
+		color: $lighter-font-color;
+	}
+
+	.wrap {
+		min-height: 100%;
+		height: auto;
+		/* Negative indent footer by its height */
+		margin: 0 auto -176px;
+		/* Pad bottom by footer height */
+		padding: 0 0 176px;
+	}
+
+	footer {
+		height: 176px;
 	}
 }
 

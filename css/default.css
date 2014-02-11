@@ -186,6 +186,9 @@ input[type="text"] {
 input[type="text"] {
   height: 34px; }
 
+.horizontal-separator {
+  border-top: 1px solid #ebebeb; }
+
 /* Homepage */
 .index .col-sm-6 {
   text-align: center; }
@@ -525,7 +528,7 @@ input[type="text"] {
   .product-page .col-md-7 label {
     font-size: 22px;
     font-weight: 300;
-    color: #555; }
+    color: #555555; }
   .product-page .col-md-7 div.quantity {
     margin: 10px 0; }
     .product-page .col-md-7 div.quantity .form-control {
@@ -620,3 +623,21 @@ input[type="text"] {
 .product-page .bid-history .table > tbody > tr > td {
   border-top: none;
   padding: 6px 8px; }
+
+/* About Us page */
+.about-us-page h1 {
+  margin-top: 80px; }
+.about-us-page div.horizontal-separator {
+  margin-bottom: 30px; }
+.about-us-page .col-md-8 p {
+  font-size: 16px;
+  color: #555555; }
+.about-us-page .wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -176px;
+  /* Pad bottom by footer height */
+  padding: 0 0 176px; }
+.about-us-page footer {
+  height: 176px; }
